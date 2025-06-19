@@ -6,11 +6,10 @@ phases:
       python: 3.12
     commands:
       - python --version
-      - pip install -r req.txt -t .
+      - pip install -r req.txt
   build:
     commands:
-      - echo "Build phase finished"
-
+      - echo "Build complete"
 artifacts:
   files:
     - '**/*'
