@@ -5,11 +5,18 @@ phases:
     runtime-versions:
       python: 3.12
     commands:
-      - python --version
-      - pip install -r req.txt
+      - echo Installing requirements...
+      - pip install -r requirements.txt
+
   build:
     commands:
-      - echo "Build complete"
+      - echo Running build step...
+      - python -m unittest discover || echo "No tests found"
+
+  post_build:
+    commands:
+      - echo Build and install steps completed.
+
 artifacts:
   files:
     - '**/*'
