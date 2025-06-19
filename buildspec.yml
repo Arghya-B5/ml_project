@@ -5,10 +5,12 @@ phases:
     runtime-versions:
       python: 3.12
     commands:
+      - python --version
       - pip install -r req.txt -t .
   build:
     commands:
-      - echo "Build finished for Python 3.12"
+      - echo "Build phase finished"
+
 artifacts:
   files:
     - '**/*'
