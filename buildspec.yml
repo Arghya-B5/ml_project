@@ -3,19 +3,20 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.12
+      python: 3.12          # or 3.11, etc.
     commands:
-      - echo Installing requirements...
-      - pip install -r req.txt
+      - echo "Installing dependencies from req.txt…"
+      - pip install -r req.txt          # ← use your file name
 
   build:
     commands:
-      - echo Running build step...
+      - echo "Build phase complete (no Docker)."
+      # optional: run tests
       - python -m unittest discover || echo "No tests found"
 
   post_build:
     commands:
-      - echo Build and install steps completed.
+      - echo "Post‑build finished."
 
 artifacts:
   files:
