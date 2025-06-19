@@ -6,7 +6,7 @@ phases:
       python: 3.12
     commands:
       - echo Installing requirements...
-      - pip install -r requirements.txt
+      - pip install -r req.txt
 
   build:
     commands:
