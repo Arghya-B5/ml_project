@@ -3,13 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.12.7
+      python: 3.12
     commands:
-      - pip install -r requirements.txt -t .
+      - pip install -r req.txt -t .
   build:
     commands:
-      - echo "Build completed."
-
+      - echo "Build finished for Python 3.12"
 artifacts:
   files:
     - '**/*'
